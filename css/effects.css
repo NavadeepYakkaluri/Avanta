@@ -1,0 +1,756 @@
+/* ===== Night Sky Star Twinkle Animations ===== */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50%       { opacity: 1;    transform: scale(1.2); }
+}
+
+@keyframes twinkleSlow {
+  0%, 100% { opacity: 0.2; transform: scale(0.9); }
+  50%       { opacity: 0.9; transform: scale(1.15); }
+}
+
+@keyframes twinkleFast {
+  0%, 100% { opacity: 0.1; transform: scale(0.75); }
+  30%       { opacity: 0.8; transform: scale(1.1); }
+  70%       { opacity: 0.4; transform: scale(0.95); }
+}
+
+@keyframes shootingStar {
+  0%   { transform: translateX(0) translateY(0) scaleX(1); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(400px) translateY(200px) scaleX(3); opacity: 0; }
+}
+
+@keyframes nebulaGlow {
+  0%, 100% { opacity: 0.04; }
+  50%       { opacity: 0.09; }
+}
+
+/* ===== Keyframe Animations ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+@keyframes floatRotate1 {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50%      { transform: rotate(-4deg) translateY(-12px); }
+}
+
+@keyframes floatRotate2 {
+  0%, 100% { transform: rotate(3deg) translateY(0); }
+  50%      { transform: rotate(5deg) translateY(-16px); }
+}
+
+@keyframes floatRotate3 {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50%      { transform: rotate(-4deg) translateY(-10px); }
+}
+
+@keyframes orbDrift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(30px, -40px) scale(1.08); }
+  66%      { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-35px, 30px) scale(1.1); }
+}
+
+@keyframes orbDrift3 {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(25px, 35px); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(61, 107, 79, 0.45); }
+  70%  { box-shadow: 0 0 0 12px rgba(61, 107, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(61, 107, 79, 0); }
+}
+
+@keyframes pulseRingDark {
+  0%   { box-shadow: 0 0 0 0 rgba(109, 184, 138, 0.45); }
+  70%  { box-shadow: 0 0 0 12px rgba(109, 184, 138, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(109, 184, 138, 0); }
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40%      { transform: translateY(-8px) scale(1.15); }
+  60%      { transform: translateY(-4px) scale(1.08); }
+}
+
+@keyframes toastBounceIn {
+  0%   { transform: translateY(120%) scale(0.8); opacity: 0; }
+  60%  { transform: translateY(-8px) scale(1.02); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes underlineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes badgePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shineSweep {
+  0%   { left: -100%; }
+  100% { left: 200%; }
+}
+
+@keyframes pageLoadFade {
+  from { opacity: 1; }
+  to   { opacity: 0; visibility: hidden; }
+}
+
+@keyframes ctaGlow {
+  0%, 100% { box-shadow: 0 0 30px rgba(61, 107, 79, 0.3); }
+  50%      { box-shadow: 0 0 60px rgba(61, 107, 79, 0.55); }
+}
+
+@keyframes emojiWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-8deg); }
+  75%      { transform: rotate(8deg); }
+}
+
+/* ===== Page Load Overlay ===== */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  transition: opacity 0.5s ease;
+}
+
+.page-loader.done {
+  animation: pageLoadFade 0.6s ease forwards;
+  pointer-events: none;
+}
+
+.loader-logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  animation: scaleIn 0.6s ease;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spinSlow 0.8s linear infinite;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ===== Navbar Scroll Effect ===== */
+.navbar {
+  transition: background var(--transition),
+              border-color var(--transition),
+              box-shadow 0.4s ease,
+              height 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 24px var(--color-shadow);
+  border-bottom-color: transparent;
+}
+
+.navbar.scrolled .brand-icon {
+  animation: pulseRing 2s infinite;
+}
+
+[data-theme="dark"] .navbar.scrolled .brand-icon {
+  animation-name: pulseRingDark;
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: var(--color-primary);
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.theme-toggle:active {
+  transform: rotate(180deg) scale(0.9);
+}
+
+.theme-toggle {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Hero Effects ===== */
+.hero {
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-blob-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-primary);
+  opacity: 0.12;
+  top: -10%;
+  right: 5%;
+  animation: orbDrift1 14s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-accent);
+  opacity: 0.1;
+  bottom: 10%;
+  left: -5%;
+  animation: orbDrift2 18s ease-in-out infinite;
+}
+
+.hero-blob-3 {
+  width: 200px;
+  height: 200px;
+  background: var(--color-primary-light);
+  opacity: 0.08;
+  top: 40%;
+  left: 40%;
+  animation: orbDrift3 10s ease-in-out infinite;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent), var(--color-primary-light));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+.hero-content .badge {
+  animation: fadeInUp 0.6s ease backwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-content .badge:nth-child(1) { animation-delay: 0.2s; }
+.hero-content .badge:nth-child(2) { animation-delay: 0.35s; }
+.hero-content .badge:nth-child(3) { animation-delay: 0.5s; }
+
+.hero-content .badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px var(--color-shadow);
+  border-color: var(--color-primary);
+  animation: badgePop 0.4s ease;
+}
+
+.hero-content h1 {
+  animation: fadeInUp 0.7s ease 0.3s backwards;
+}
+
+.hero-content > p {
+  animation: fadeInUp 0.7s ease 0.45s backwards;
+}
+
+.hero-actions {
+  animation: fadeInUp 0.7s ease 0.6s backwards;
+}
+
+.hero-product-card:nth-child(1) {
+  animation: floatRotate1 5s ease-in-out infinite;
+}
+
+.hero-product-card:nth-child(2) {
+  animation: floatRotate2 6s ease-in-out infinite 0.5s;
+}
+
+.hero-product-card:nth-child(3) {
+  animation: floatRotate3 5.5s ease-in-out infinite 1s;
+}
+
+.hero-product-card {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s ease;
+  cursor: default;
+}
+
+.hero-product-card:hover {
+  box-shadow: 0 20px 50px var(--color-shadow);
+  z-index: 10 !important;
+}
+
+.hero-product-card .product-emoji {
+  transition: transform 0.3s ease;
+}
+
+.hero-product-card:hover .product-emoji {
+  animation: emojiWiggle 0.5s ease;
+}
+
+.hero-visual {
+  animation: fadeIn 1s ease 0.4s backwards;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  background-size: 200% auto;
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(61, 107, 79, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(61, 107, 79, 0.2);
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: none;
+}
+
+.btn-shimmer:hover::before {
+  animation: shineSweep 0.7s ease;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: rippleExpand 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleExpand {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ===== Product Cards ===== */
+.product-card {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.08) 50%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+  animation: shineSweep 0.8s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px var(--color-shadow);
+}
+
+.product-image {
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-card:hover .product-emoji,
+.product-card:hover .product-image {
+  animation: emojiWiggle 0.6s ease;
+}
+
+.product-tag {
+  animation: pulseRing 3s infinite;
+}
+
+.ingredient-tag {
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.product-card:hover .ingredient-tag {
+  transform: translateY(-2px);
+}
+
+.ingredient-tag:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* ===== Feature Items ===== */
+.feature-item {
+  transition: transform 0.35s ease, background 0.35s ease;
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+.feature-item:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+}
+
+.feature-icon {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.feature-item:hover .feature-icon {
+  animation: iconBounce 0.6s ease;
+}
+
+/* ===== Value Cards ===== */
+.value-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px var(--color-shadow);
+}
+
+.value-card:hover .value-icon {
+  animation: iconBounce 0.6s ease;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite, ctaGlow 4s ease-in-out infinite;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+  animation: spinSlow 20s linear infinite;
+  pointer-events: none;
+}
+
+.cta-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== Page Header ===== */
+.page-header {
+  position: relative;
+  overflow: hidden;
+  animation: fadeInDown 0.6s ease;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+}
+
+/* ===== Order Cards ===== */
+.order-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateX(6px);
+  box-shadow: -4px 8px 24px var(--color-shadow);
+}
+
+.order-status {
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover .order-status {
+  transform: scale(1.08);
+}
+
+/* ===== Forms ===== */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--color-shadow), 0 0 0 3px rgba(61, 107, 79, 0.15);
+  transition: all 0.3s ease;
+}
+
+.form-card,
+.contact-info-card,
+.auth-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.form-card:hover,
+.contact-info-card:hover,
+.auth-card:hover {
+  box-shadow: 0 12px 40px var(--color-shadow);
+}
+
+.contact-item-icon {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-item:hover .contact-item-icon {
+  transform: scale(1.15) rotate(5deg);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.social-btn {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--color-shadow);
+}
+
+/* ===== Footer ===== */
+.footer-col ul li a {
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.footer-col ul li a:hover {
+  transform: translateX(4px);
+}
+
+.footer-social a {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease,
+              background 0.3s ease,
+              color 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px) rotate(8deg) scale(1.1);
+}
+
+/* ===== Toast ===== */
+.toast.show {
+  animation: toastBounceIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ===== Section Label ===== */
+.section-label {
+  position: relative;
+  animation: fadeInUp 0.5s ease backwards;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '—';
+  margin: 0 0.5rem;
+  opacity: 0.4;
+}
+
+/* ===== About Block ===== */
+.about-image-block {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-image-block:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 20px 50px var(--color-shadow);
+}
+
+.about-big-icon {
+  animation: float 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* ===== Add to cart pulse ===== */
+.btn-add-pulse {
+  animation: badgePop 0.4s ease;
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-loader {
+    display: none;
+  }
+}

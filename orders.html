@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and track your Avood orders.">
+  <title>Orders – Avood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">🌿</span>
+        Avood
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="orders.html" class="nav-link">Orders</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="login.html" class="nav-link">Login</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a href="cart.html" class="cart-btn" id="cart-nav-btn" aria-label="View cart">
+          🛒
+          <span class="cart-badge" id="cart-badge">0</span>
+        </a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Your Orders</span>
+      <h1>Order History</h1>
+      <p>Track your natural food orders and reorder your favorites.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+
+      <div class="order-card">
+        <div class="order-header">
+          <div>
+            <div class="order-id">Order #AV-2026-0042</div>
+            <p style="font-size: 0.825rem; margin-top: 0.15rem;">Placed on June 20, 2026</p>
+          </div>
+          <span class="order-status status-delivered">Delivered</span>
+        </div>
+        <div class="order-items">
+          <div class="order-item">
+            <span class="order-item-name">🍬 Sesame Laddu (250g)</span>
+            <span class="order-item-qty">× 2</span>
+          </div>
+          <div class="order-item">
+            <span class="order-item-name">🌰 Healthy Energy Bars (Pack of 6)</span>
+            <span class="order-item-qty">× 1</span>
+          </div>
+          <div class="order-total">
+            <span>Total</span>
+            <span>₹697</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-card">
+        <div class="order-header">
+          <div>
+            <div class="order-id">Order #AV-2026-0038</div>
+            <p style="font-size: 0.825rem; margin-top: 0.15rem;">Placed on June 15, 2026</p>
+          </div>
+          <span class="order-status status-shipped">Shipped</span>
+        </div>
+        <div class="order-items">
+          <div class="order-item">
+            <span class="order-item-name">🥜 Almond Nut Brittle (200g)</span>
+            <span class="order-item-qty">× 1</span>
+          </div>
+          <div class="order-item">
+            <span class="order-item-name">🫘 Nut Laddu (300g)</span>
+            <span class="order-item-qty">× 1</span>
+          </div>
+          <div class="order-total">
+            <span>Total</span>
+            <span>₹648</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-card">
+        <div class="order-header">
+          <div>
+            <div class="order-id">Order #AV-2026-0047</div>
+            <p style="font-size: 0.825rem; margin-top: 0.15rem;">Placed on June 25, 2026</p>
+          </div>
+          <span class="order-status status-processing">Processing</span>
+        </div>
+        <div class="order-items">
+          <div class="order-item">
+            <span class="order-item-name">🌾 Multigrain Granola Bars (Pack of 8)</span>
+            <span class="order-item-qty">× 2</span>
+          </div>
+          <div class="order-item">
+            <span class="order-item-name">🍫 Coconut Date Rolls (200g)</span>
+            <span class="order-item-qty">× 1</span>
+          </div>
+          <div class="order-total">
+            <span>Total</span>
+            <span>₹617</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html#products" class="btn btn-primary">Order More</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">🌿</span>
+            Avood
+          </a>
+          <p>100% natural healthy foods — zero chemicals, zero preservatives.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="index.html#products">Sesame Laddu</a></li>
+            <li><a href="index.html#products">Healthy Bars</a></li>
+            <li><a href="index.html#products">Nut Brittle</a></li>
+            <li><a href="index.html#products">Nut Laddu</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="orders.html">My Orders</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Avood. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>
