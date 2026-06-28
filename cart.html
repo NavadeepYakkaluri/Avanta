@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your Avood shopping cart – review your natural healthy foods before placing an order.">
-  <title>Cart – Avood</title>
+  <meta name="description" content="Your Avanta shopping cart – review your natural healthy foods before placing an order.">
+  <title>Cart – Avanta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -320,7 +320,7 @@
     <div class="navbar-inner">
       <a href="index.html" class="navbar-brand">
         <span class="brand-icon">🌿</span>
-        Avood
+        Avanta
       </a>
       <ul class="navbar-nav">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -365,7 +365,7 @@
         <div class="footer-brand">
           <a href="index.html" class="navbar-brand">
             <span class="brand-icon">🌿</span>
-            Avood
+            Avanta
           </a>
           <p>100% natural healthy foods — zero chemicals, zero preservatives. Crafted with love from nature's finest ingredients.</p>
         </div>
@@ -397,7 +397,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Avood. All rights reserved. Made with natural ingredients only.</p>
+        <p>&copy; 2026 Avanta. All rights reserved. Made with natural ingredients only.</p>
         <div class="footer-social">
           <a href="#" aria-label="Instagram">📷</a>
           <a href="#" aria-label="Facebook">📘</a>
@@ -427,7 +427,7 @@
     /* ===== Render Cart ===== */
     function renderCart() {
       var layout = document.getElementById('cart-layout');
-      var cart = window.avoodCart.getCart();
+      var cart = window.avantaCart.getCart();
 
       if (cart.length === 0) {
         layout.innerHTML =
@@ -490,25 +490,25 @@
     }
 
     function changeQty(idx, delta) {
-      var cart = window.avoodCart.getCart();
+      var cart = window.avantaCart.getCart();
       if (!cart[idx]) return;
       cart[idx].qty = Math.max(1, cart[idx].qty + delta);
-      window.avoodCart.saveCart(cart);
-      window.avoodCart.updateCartBadge();
+      window.avantaCart.saveCart(cart);
+      window.avantaCart.updateCartBadge();
       renderCart();
     }
 
     function removeItem(idx) {
-      var cart = window.avoodCart.getCart();
+      var cart = window.avantaCart.getCart();
       cart.splice(idx, 1);
-      window.avoodCart.saveCart(cart);
-      window.avoodCart.updateCartBadge();
+      window.avantaCart.saveCart(cart);
+      window.avantaCart.updateCartBadge();
       renderCart();
     }
 
     function applyPromo() {
       var code = document.getElementById('promo-code');
-      if (code && code.value.trim().toUpperCase() === 'AVOOD10') {
+      if (code && code.value.trim().toUpperCase() === 'AVANTA10') {
         alert('Promo code applied! 10% off at checkout.');
       } else {
         alert('Invalid promo code.');

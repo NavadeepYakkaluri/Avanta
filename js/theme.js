@@ -1,7 +1,7 @@
 /* ===== Theme Toggle + Night Sky ===== */
 (function () {
   'use strict';
-  var STORAGE_KEY = 'avood-theme';
+  var STORAGE_KEY = 'avanta-theme';
 
   /* ─────────────── theme helpers ─────────────── */
   function getPreferredTheme() {

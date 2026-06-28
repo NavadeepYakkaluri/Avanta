@@ -7,7 +7,7 @@
     var loader = document.createElement('div');
     loader.className = 'page-loader';
     loader.innerHTML =
-      '<div class="loader-logo">🌿 Avood</div>' +
+      '<div class="loader-logo">🌿 Avanta</div>' +
       '<div class="loader-spinner"></div>';
     document.body.prepend(loader);
 

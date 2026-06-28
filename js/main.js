@@ -3,14 +3,14 @@
   /* ===== Cart Utilities (localStorage) ===== */
   function getCart() {
     try {
-      return JSON.parse(localStorage.getItem('avood_cart') || '[]');
+      return JSON.parse(localStorage.getItem('avanta_cart') || '[]');
     } catch (e) {
       return [];
     }
   }
 
   function saveCart(cart) {
-    localStorage.setItem('avood_cart', JSON.stringify(cart));
+    localStorage.setItem('avanta_cart', JSON.stringify(cart));
   }
 
   function getCartCount() {
@@ -138,5 +138,5 @@
   }
 
   /* Expose to cart page */
-  window.avoodCart = { getCart: getCart, saveCart: saveCart, updateCartBadge: updateCartBadge };
+  window.avantaCart = { getCart: getCart, saveCart: saveCart, updateCartBadge: updateCartBadge };
 })();
